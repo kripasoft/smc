@@ -9,9 +9,9 @@ ade mkprivate */*
 ade mkprivate */*/*
 ade mkprivate */*/*/*
 ade mkprivate */*/*/*/*
-find . -nMW ".ADE_PATH" -EXEC RM {} \;
+find . -name ".ade_path" -exec rm {} \;
 
-CHMOD -R 755 *
+chmod -R 755 *
 tar -cvhzf fa_deploy.tar.gz *.ear *.war
 
 # deploying the ear to your SMC environment 
